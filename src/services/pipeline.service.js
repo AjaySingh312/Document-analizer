@@ -5,11 +5,9 @@ import extractRegex from "../utills/regexExtractor.js";
 
 export const documentAnalyzer = async (text) => {
     try {
-        const summary = await summarize(text)
+        const result = await summarize(text)
 
-        return {
-            summary
-        }
+        return result;
     } catch (error) {
         return {
             summary: text.split("\n").slice(0, 3).join(" "),
