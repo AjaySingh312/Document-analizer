@@ -7,11 +7,7 @@ export const documentAnalyzer = async (text) => {
     try {
         const result = await summarize(text)
 
-        return {
-           summary: result.summary,
-           entities: result.entities,
-           sentiment: result.sentiment
-        }
+        return result;
     } catch (error) {
         return {
             summary: text.split("\n").slice(0, 3).join(" "),
