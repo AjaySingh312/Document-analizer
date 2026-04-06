@@ -26,7 +26,7 @@ Rules:
 - dates: only key dates in format YYYY-MM-DD
 - organizations: only main organization
 - names: only person names if present
-- sentiment: must be one of "Positive", "Negative", "Neutral"
+- sentiment: must be one of "Positive", "Negative", "Neutral"     // very important must return
 
 Document:
 ${text}
