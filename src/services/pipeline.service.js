@@ -5,10 +5,12 @@ import extractRegex from "../utills/regexExtractor.js";
 
 export const documentAnalyzer = async (text) => {
     try {
-        const summary = await summarize(text)
+        const result = await summarize(text)
 
         return {
-            summary
+           summary: result.summary,
+           entities: result.entities
+
         }
     } catch (error) {
         return {
