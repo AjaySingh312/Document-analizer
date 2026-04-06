@@ -41,6 +41,10 @@ ${text}
 
         let parsed;
         try {
+            const jsonStart = clean.indexOf("{");
+            const jsonEnd = clean.lastIndexOf("}") + 1;
+            clean = clean.slice(jsonStart, jsonEnd);
+
             parsed = JSON.parse(clean);
         } catch {
             parsed = {
