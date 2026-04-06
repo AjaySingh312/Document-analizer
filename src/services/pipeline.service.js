@@ -9,8 +9,8 @@ export const documentAnalyzer = async (text) => {
 
         return {
            summary: result.summary,
-           entities: result.entities
-
+           entities: result.entities,
+           sentiment: result.sentiment
         }
     } catch (error) {
         return {
